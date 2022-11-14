@@ -1,0 +1,170 @@
+[
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756209,
+    "httpOnly": false,
+    "name": "cookie_is_signed",
+    "path": "/",
+    "secure": false,
+    "value": "1"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1670812209,
+    "httpOnly": false,
+    "name": "shop_type",
+    "path": "/",
+    "secure": false,
+    "value": "DRfzQ"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756208,
+    "httpOnly": false,
+    "name": "xiaoe_admin_is_login",
+    "path": "/",
+    "secure": false,
+    "value": "1"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1668241809,
+    "httpOnly": false,
+    "name": "b_user_token",
+    "path": "/",
+    "secure": false,
+    "value": "token_636f052e6f464YjSUHrzPQ7OH2L6DRfzQ"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1702780209,
+    "httpOnly": false,
+    "name": "sensorsdata2015jssdkcross",
+    "path": "/",
+    "secure": false,
+    "value": "%7B%22distinct_id%22%3A%22b_u_cbc120e1l0csp9kjd96g%22%2C%22first_id%22%3A%2218469ac1ba5206-0feefd3368f958-16386952-2073600-18469ac1ba68a4%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fopen.weixin.qq.com%2F%22%2C%22page_submodule%22%3A%22%E5%B8%90%E5%8F%B7%E4%B8%BB%E9%A1%B5%22%2C%22page_name%22%3A%22createShop%22%7D%2C%22%24device_id%22%3A%2218469ac1ba5206-0feefd3368f958-16386952-2073600-18469ac1ba68a4%22%7D"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756209,
+    "httpOnly": false,
+    "name": "cookie_channel",
+    "path": "/",
+    "secure": false,
+    "value": "admin"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1668268799,
+    "httpOnly": false,
+    "name": "sajssdk_2015_cross_new_user",
+    "path": "/",
+    "secure": false,
+    "value": "1"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756198,
+    "httpOnly": false,
+    "name": "Qs_pv_416447",
+    "path": "/",
+    "secure": false,
+    "value": "2583397882170956300"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756198,
+    "httpOnly": false,
+    "name": "Qs_lvt_416447",
+    "path": "/",
+    "secure": false,
+    "value": "1668220198"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "httpOnly": false,
+    "name": "unionid",
+    "path": "/",
+    "secure": false,
+    "value": "oTHW5v69iQgK8NBrgHSnPR3ExRnE"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "expiry": 1668824997,
+    "httpOnly": false,
+    "name": "mobile_manage",
+    "path": "/",
+    "secure": false,
+    "value": "0"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "httpOnly": false,
+    "name": "showXeQRCode",
+    "path": "/",
+    "secure": false,
+    "value": "false"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "expiry": 1668241809,
+    "httpOnly": true,
+    "name": "laravel_session",
+    "path": "/",
+    "secure": false,
+    "value": "eyJpdiI6IitJUHZaSG5Md2dUYWptVmdFbE5mZFE9PSIsInZhbHVlIjoidTRyckVQSzZUbzZYU202U1JsbDJkV3Q0TTBiZFU2R09ESnI2R2xjV3VTRXFscmV5ZkJKYnB1eksrY2Q1UmNySjNJVTdpYk5obkI1M3U5QU5YRWVkYWc9PSIsIm1hYyI6ImVmODhkOWYzM2Y2OTc5Y2U1ZjRhYzI4ZTM5ZDg2MjUwNDQwOTYxYWUwNjMzNTkzMWEwNjAyOGIzZTE0YmYwZTYifQ%3D%3D"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756197,
+    "httpOnly": false,
+    "name": "cookie_session_id",
+    "path": "/",
+    "secure": false,
+    "value": "f7580395071222cc9d2139b1786664bb"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "expiry": 1668306597,
+    "httpOnly": false,
+    "name": "login_param",
+    "path": "/",
+    "secure": false,
+    "value": "%7B%22app_id%22%3A%22%22%2C%22user_id%22%3A%22%22%2C%22version_type%22%3A0%2C%22client_ip%22%3A%2227.46.106.100%22%2C%22user_agent%22%3A%22Mozilla/5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5%29%20AppleWebKit/537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome/67.0.3396.99%20Safari/537.36%22%2C%22url%22%3A%22https%3A//admin.xiaoe-tech.com/t/login%3Freg_source%3D0101%26src_page%3DA%22%2C%22token%22%3A%22%22%7D"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1699756197,
+    "httpOnly": false,
+    "name": "channel",
+    "path": "/",
+    "secure": false,
+    "value": "admin"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1668221408,
+    "httpOnly": false,
+    "name": "data_scan_report_id",
+    "path": "/",
+    "secure": false,
+    "value": "oTHW5v69iQgK8NBrgHSnPR3ExRnE"
+  },
+  {
+    "domain": ".xiaoe-tech.com",
+    "expiry": 1702780197,
+    "httpOnly": false,
+    "name": "XIAOEID",
+    "path": "/",
+    "secure": false,
+    "value": "f3aadf3b7e7381ea4de987b4b3b96b9d"
+  },
+  {
+    "domain": "admin.xiaoe-tech.com",
+    "httpOnly": false,
+    "name": "mediav",
+    "path": "/t",
+    "secure": false,
+    "value": "%7B%22eid%22%3A%22544618%22%2C%22ep%22%3A%22%22%2C%22vid%22%3A%22%22%2C%22ctn%22%3A%22%22%2C%22vvid%22%3A%22%22%2C%22_mvnf%22%3A1%2C%22_mvctn%22%3A0%2C%22_mvck%22%3A1%2C%22_refnf%22%3A1%7D"
+  }
+]
