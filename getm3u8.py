@@ -138,9 +138,9 @@ def scroll_find_ele(_driver: Chrome, by, value):
     """
     a = 0
     ele = ''
-    while a < 10:
+    while a < 15:
         _driver.execute_script('window.scrollBy(0,800)')  # 向下滚
-        time.sleep(1)
+        time.sleep(3)
         a += 1
         try:
             ele = _driver.find_element(by, value)
@@ -169,14 +169,14 @@ def start_webdriver_with_bmp(url: str):
     :return:
     """
     # 启动bmp代理服务
-    _server = Server(r"F:\Software\browsermob-proxy-2.1.4\bin\browsermob-proxy.bat")
+    _server = Server(r"browsermob-proxy-2.1.4\bin\browsermob-proxy.bat")
     _server.start()
     _proxy = _server.create_proxy()
 
     # 浏览器启动配置
     options = Options()
     # options.debugger_address = "127.0.0.1:9222"
-    options.binary_location = r"C:\Users\24353\scoop\apps\googlechrome_ScoopInstaller\current\chrome.exe"
+    options.binary_location = r"C:\Users\kk\scoop\apps\googlechrome_ScoopInstaller\current\chrome.exe"
     options.add_argument('--proxy-server={0}'.format(_proxy.proxy))
     options.add_argument("--start-maximized")  # 窗口最大化
     options.add_argument('--incognito')
@@ -219,8 +219,7 @@ def start_webdriver_with_bmp(url: str):
 
     return _driver, _server, _proxy
 
-
-if __name__ == '__main__':
+def main():
     base_url = "https://appbt7csfy77461.h5.xiaoeknow.com/p/course/member/p_60e027a2e4b0151fc94c898b?type=3"
     dp = start_webdriver_with_bmp(base_url)
     driver = dp[0]
@@ -232,10 +231,15 @@ if __name__ == '__main__':
                    30, By.CLASS_NAME)
 
     a = 0
-    while a < 5:
+    while a < 52:
+        print('开始获取第{}节'.format(a + 1))
         scroll_find_ele(driver, By.CLASS_NAME, 'more')
         title_list = driver.find_elements(By.CLASS_NAME, 'content-title-wrapper')
         pprint.pp(len(title_list))
+        if (len(title_list) < a):
+            pprint.pp('中断获取')
+            break
+
         scroll_to_top(driver)
         pprint.pp(title_list[a].get_attribute('class'))
         title_list[a].click()
@@ -244,10 +248,10 @@ if __name__ == '__main__':
         a += 1
 
     # 删除m3u8文件夹
-    if os.path.isdir('./m3u8'):
-        pprint.pp('开始删除m3u8')
-        shutil.rmtree('./m3u8')
-        pprint.pp('m3u8删除完成')
+    # if os.path.isdir('./m3u8'):
+    #     pprint.pp('开始删除m3u8')
+    #     shutil.rmtree('./m3u8')
+    #     pprint.pp('m3u8删除完成')
 
     # 解析返回内容
     result = proxy.har
@@ -270,3 +274,6 @@ if __name__ == '__main__':
     time.sleep(50)
     server.stop()
     driver.quit()
+
+if __name__ == '__main__':
+    main()
