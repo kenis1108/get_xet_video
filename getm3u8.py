@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: keins
+# @Author: kenis
 # @File: getm3u8.py
 """
 1. 打开网址
