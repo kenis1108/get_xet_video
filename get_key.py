@@ -32,7 +32,7 @@ def get_key_from_url(url: str, userid: str) -> str:
 
 
 if __name__ == '__main__':
-    _url = 'https://app.xiaoe-tech.com/xe.basic-platform.material-center.distribute.vod.pri.get/1.0.0?app_id=appbt7csfy77461&mid=m_8CM5VEj4mDZ8V_kMLOodco&urld=9ee481571342dfecdef95b731271c731'
+    _url = 'https://app.xiaoe-tech.com/xe.basic-platform.material-center.distribute.vod.pri.get/1.0.0?app_id=appbt7csfy77461&mid=m_ZnKMe2h0yrHaA_AQc3hDyp&urld=4d00cfc8f1ddc43ab3e7f246e9fe17f5'
     _uid = 'u_6231b44824982_7dt7BKJ7MJ'
     base64_key = get_key_from_url(url=_url, userid=_uid)
     print(base64_key)
