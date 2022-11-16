@@ -48,7 +48,7 @@ def wait_click_btn(_driver: Chrome, selector, timeout, by):
             num += 1
             pprint.pp(err)
 
-    btn = driver.find_element(by, selector)
+    btn = _driver.find_element(by, selector)
     pprint.pp('开始点击{}'.format(btn.text))
     btn.click()
     time.sleep(3)
@@ -122,7 +122,7 @@ def how_many_handle(_driver: Chrome):
     handles = _driver.window_handles
     if len(handles) > 1:
         pprint.pp(handles)
-        driver.switch_to.window(handles[-1])
+        _driver.switch_to.window(handles[-1])
         return 1
     else:
         return 0
@@ -160,6 +160,27 @@ def scroll_to_top(_driver: Chrome):
     time.sleep(2)
     _driver.execute_script('document.documentElement.scrollTop = 0')
     pprint.pp('回到顶部')
+
+
+def click_one(_driver: Chrome, index: int):
+    """点击某节课程
+
+    :param _driver:
+    :param index:
+    :return:
+    """
+    scroll_find_ele(_driver, By.CLASS_NAME, 'more')
+    title_list = _driver.find_elements(By.CLASS_NAME, 'content-title-wrapper')
+    pprint.pp(len(title_list))
+    if (len(title_list) < index):
+        pprint.pp('中断获取')
+        return
+
+    scroll_to_top(_driver)
+    pprint.pp(title_list[index].get_attribute('class'))
+    title_list[index].click()
+    time.sleep(5)
+    _driver.back()
 
 
 def start_webdriver_with_bmp(url: str):
@@ -219,6 +240,7 @@ def start_webdriver_with_bmp(url: str):
 
     return _driver, _server, _proxy
 
+
 def main():
     base_url = "https://appbt7csfy77461.h5.xiaoeknow.com/p/course/member/p_60e027a2e4b0151fc94c898b?type=3"
     dp = start_webdriver_with_bmp(base_url)
@@ -230,32 +252,21 @@ def main():
                    'topics-item_main',
                    30, By.CLASS_NAME)
 
-    a = 0
-    while a < 52:
+    a = 7
+    index = a+1
+    while a < 11:
         print('开始获取第{}节'.format(a + 1))
-        scroll_find_ele(driver, By.CLASS_NAME, 'more')
-        title_list = driver.find_elements(By.CLASS_NAME, 'content-title-wrapper')
-        pprint.pp(len(title_list))
-        if (len(title_list) < a):
-            pprint.pp('中断获取')
-            break
-
-        scroll_to_top(driver)
-        pprint.pp(title_list[a].get_attribute('class'))
-        title_list[a].click()
-        time.sleep(5)
-        driver.back()
+        click_one(driver,a)
         a += 1
 
     # 删除m3u8文件夹
-    # if os.path.isdir('./m3u8'):
-    #     pprint.pp('开始删除m3u8')
-    #     shutil.rmtree('./m3u8')
-    #     pprint.pp('m3u8删除完成')
+    if os.path.isdir('./m3u8'):
+        pprint.pp('开始删除m3u8')
+        shutil.rmtree('./m3u8')
+        pprint.pp('m3u8删除完成')
 
     # 解析返回内容
     result = proxy.har
-    index = 1
     for entry in result['log']['entries']:
         _url: str = entry['request']['url']
         # 根据URL找到数据接口
@@ -274,6 +285,7 @@ def main():
     time.sleep(50)
     server.stop()
     driver.quit()
+
 
 if __name__ == '__main__':
     main()

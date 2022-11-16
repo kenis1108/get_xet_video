@@ -30,9 +30,12 @@ def get_key_from_url(url: str, userid: str) -> str:
         print(f"获取异常，请求返回值：{rsp.text}")
         return ''
 
-
-if __name__ == '__main__':
-    _url = 'https://app.xiaoe-tech.com/xe.basic-platform.material-center.distribute.vod.pri.get/1.0.0?app_id=appbt7csfy77461&mid=m_ZnKMe2h0yrHaA_AQc3hDyp&urld=4d00cfc8f1ddc43ab3e7f246e9fe17f5'
+def main(_url):
     _uid = 'u_6231b44824982_7dt7BKJ7MJ'
+    _url = _url
     base64_key = get_key_from_url(url=_url, userid=_uid)
     print(base64_key)
+    return base64_key
+
+if __name__ == '__main__':
+    main('https://app.xiaoe-tech.com/xe.basic-platform.material-center.distribute.vod.pri.get/1.0.0?app_id=appbt7csfy77461&mid=m_WX6h5sXcj1YAq_gZuQNhlD&urld=e7a53bdcb6a72c1b9b68790c3fc1d038')
