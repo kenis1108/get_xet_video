@@ -9,6 +9,8 @@
 5. 获取课程列表
 6. 回到顶部
 7. 循环点击课程再点击回退
+8. 获取har
+9. 下载m3u8
 """
 import json
 import os
@@ -252,11 +254,11 @@ def main():
                    'topics-item_main',
                    30, By.CLASS_NAME)
 
-    a = 7
-    index = a+1
-    while a < 11:
+    a = 46
+    index = a + 1
+    while a < 52:
         print('开始获取第{}节'.format(a + 1))
-        click_one(driver,a)
+        click_one(driver, a)
         a += 1
 
     # 删除m3u8文件夹
